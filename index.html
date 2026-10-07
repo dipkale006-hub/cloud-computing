@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CloudBox - Cloud Computing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                ☁️ <span>CloudBox</span>
+            </div>
+
+            <nav>
+                <a href="#" class="active">🏠 Dashboard</a>
+                <a href="#files">📁 My Files</a>
+                <a href="#recent">🕘 Recent</a>
+                <a href="#shared">👥 Shared</a>
+                <a href="#trash">🗑️ Trash</a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <button id="themeBtn">🌙 Dark Mode</button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main">
+
+            <!-- Header -->
+            <header class="header">
+                <div>
+                    <h1>Cloud Dashboard</h1>
+                    <p>Manage your files securely in the cloud.</p>
+                </div>
+
+                <div class="profile">
+                    <div class="avatar">U</div>
+                    <span>User</span>
+                </div>
+            </header>
+
+            <!-- Storage Card -->
+            <section class="storage-card">
+                <div class="storage-info">
+                    <div class="cloud-icon">☁️</div>
+                    <div>
+                        <h2>Cloud Storage</h2>
+                        <p><span id="usedStorage">2.4</span> GB of 10 GB used</p>
+                    </div>
+                </div>
+
+                <div class="progress-container">
+                    <div class="progress">
+                        <div id="progressBar" class="progress-bar"></div>
+                    </div>
+                    <span id="storagePercent">24%</span>
+                </div>
+            </section>
+
+            <!-- Statistics -->
+            <section class="stats">
+                <div class="stat-card">
+                    <div class="stat-icon blue">📁</div>
+                    <div>
+                        <h3 id="fileCount">0</h3>
+                        <p>Total Files</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon green">☁️</div>
+                    <div>
+                        <h3>10 GB</h3>
+                        <p>Total Storage</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon orange">👥</div>
+                    <div>
+                        <h3>12</h3>
+                        <p>Shared Files</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon purple">🔒</div>
+                    <div>
+                        <h3>Secure</h3>
+                        <p>Cloud Status</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- File Management -->
+            <section class="files-section" id="files">
+
+                <div class="section-header">
+                    <div>
+                        <h2>My Files</h2>
+                        <p>Upload and manage your cloud files.</p>
+                    </div>
+
+                    <label class="upload-btn">
+                        ⬆ Upload File
+                        <input type="file" id="fileInput" hidden>
+                    </label>
+                </div>
+
+                <!-- Search -->
+                <div class="search-box">
+                    🔍
+                    <input type="text" id="searchInput" placeholder="Search files...">
+                </div>
+
+                <!-- File Table -->
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Type</th>
+                                <th>Size</th>
+                                <th>Date</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="fileTable">
+                            <!-- Files inserted by JavaScript -->
+                        </tbody>
+                    </table>
+
+                    <div id="emptyMessage" class="empty">
+                        📂 No files found
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- Footer -->
+            <footer>
+                <p>© 2026 CloudBox | Cloud Computing Web Application</p>
+            </footer>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
